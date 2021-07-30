@@ -1,0 +1,221 @@
+
+.heartList{
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    overflow-y: scroll;
+    height: 450px;
+}
+
+.heartListInner{
+    width: 100%;
+}
+
+.heartListWrapperTitle{
+    font-size: 30px;
+    margin-bottom: 25px;
+    height: 30%;
+    color: rgb(66, 66, 66);
+}
+
+.heartListInnerWrapper{
+    width: 100%;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(223, 223, 223);
+}
+
+.heartListInner img{
+    width: 20%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.heartListTitle{
+    margin: 0px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 35px;
+    color: rgb(255, 94, 0);
+    border-bottom: 2px solid rgb(255, 94, 0);
+}
+
+.heartListInnerWrapper div{
+    width: 25%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-right: 1px solid rgb(231, 231, 231);
+}
+
+.heartListInnerWrapperChild{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heartListInnerWrapper div h2{
+    color: rgb(66, 66, 66);
+    margin: 0px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.heartListInnerWrapper div h2 span{
+    background: rgb(255, 94, 0);
+    color: white;
+    padding: 4px 7px;
+    border-radius: 5px;
+    margin-left: 4px;
+}
+
+.heartListInnerWrapper div h3{
+    margin: 0px;
+    font-size: 30px;
+    color: rgb(255, 94, 0);
+}
+
+.empty{
+    width: 100%;
+    font-size: 35px;
+    color: rgb(255, 94, 0);
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    display: flex;
+    height: 350px;
+}
+
+.heartListInnerWrapperChild button{
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 20px 0;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: .3s;
+    background: rgb(255, 94, 0);
+}
+
+.heartListInnerWrapperChild button:hover{
+    background: rgb(253, 118, 39);
+}
+
+.clotheCounter{
+    font-size: 30px;
+}
+
+.clotheCounter span{
+    background: rgb(255, 94, 0);
+    padding: 0 5px;
+    color: white;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1100px){
+    
+    .heartListInnerWrapper{
+        padding-bottom: 50px;
+        justify-content: center;
+    }
+
+    .heartListInnerWrapper div{
+        width: 40%;
+        border-right: none;
+    }
+
+    .heartListInner img{
+        height: 350px;
+        width: 40%;
+        margin-bottom: 30px;
+    }
+
+    .heartListWrapperTitle{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .heartList{
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .heartListInner img,
+    .heartListInnerWrapper div{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .heartListInner img,
+    .heartListInnerWrapper div{
+        width: 50%;
+    }
+
+    .heartListInnerWrapperChild button{
+        width: 70%;
+        margin: 0 auto !important;
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    .heartListWrapperTitle{
+        font-size: 30px;
+    }
+
+    .heartListInner img{
+        width: 70%;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .heartListInnerWrapper div{
+        margin-top: 20px;
+        padding: 0px;
+    }
+
+    .heartListInnerWrapperChild button{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 580px){
+
+    .clotheCounter{
+        font-size: 25px;
+    }
+
+    .heartListInner img,
+    .heartListInnerWrapper div{
+        width: 80%;
+    }
+
+    .heartListInnerWrapperChild button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .heartListInner img,
+    .heartListInnerWrapper div{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    .heartListInner img,
+    .heartListInnerWrapper div{
+        width: 100%;
+    }
+}

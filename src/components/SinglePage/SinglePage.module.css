@@ -1,0 +1,297 @@
+
+
+.root{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.card{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.card_content{
+    width: 35%;
+}
+
+.card_image div{
+    width: 100%;
+    height: 550px;
+    background: rgb(240, 240, 240);
+}
+
+.card_image{
+    width: 50%;
+}
+
+.card_image div img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.card_content h1{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    margin: 0px;
+    margin-top: 15px;
+}
+
+.card_content h2{
+    font-size: 30px;
+    margin: 15px 0;
+    color: rgb(255, 94, 0);
+}
+
+.card_content h3{
+    color: rgb(59, 59, 59);
+    font-size: 23px;
+    margin: 30px 0;
+}
+
+.card_content h3 span{
+    background: rgb(255, 94, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    color: white;
+}
+
+.card_content h4{
+    font-size: 20px;
+}
+
+.card_content p{
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: rgb(59, 59, 59);
+}
+
+.card_content div{
+    margin-top: 30px;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
+
+.card_content div button{
+    width: 70%;
+    outline: none;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+    padding: 15px 0;
+    font-size: 16px;
+    border: none;
+    background: rgb(77, 77, 77);
+    color: white;
+}
+
+.card_content div button span{
+    position: relative;
+}
+
+.activeButton{
+    background: rgb(255, 94, 0) !important;
+    pointer-events: none !important;
+}
+
+.activeAlert{
+    left: 0 !important;
+}
+
+.activeHeart{
+    color: rgb(255, 94, 0) !important;
+    pointer-events: none !important;
+}
+
+.alert{
+    width: 170px;
+    position: fixed;
+    background: rgb(255, 94, 0);
+    left: -15%;
+    bottom: 30px;
+    height: 40px;
+    padding: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: .3s;
+    color: white;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 10;
+}
+
+@media screen and (max-width: 1200px){
+    
+    .alert{
+        left: -20%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .card_content h3{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    
+    .card_content h3 span{
+        padding: 5px 7px;
+        margin-left: 5px;
+    }
+    
+    .card_image div{
+        height: 500px;
+    }
+
+    .card_content h4{
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .card_content{
+        width: 40%;
+    }
+    
+    .card_image{
+        width: 55%;
+    }
+
+    .card_content h1{
+        font-size: 35px;
+    }
+
+    .card_content h3 span{
+        font-size: 18px !important;
+    }
+
+    .alert{
+        left: -25%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .card_image div{
+        height: 470px;
+    }
+
+    .card_content p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 750px){
+
+    .alert{
+        left: -30%;
+    }
+
+    .card{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card_image,
+    .card_content{
+        width: 70%;
+    }
+
+    .card_content p{
+        font-size: 17px;
+    }
+
+    .card_image{
+        order: 1;
+    }
+
+    .card_image div{
+        height: 400px;
+    }
+
+    .card_content{
+        order: 2;
+    }
+
+    .card_content div button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    .card_image,
+    .card_content{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .root{
+        width: 95%;
+    }
+
+    .card_image,
+    .card_content{
+        width: 90%;
+    }
+
+    .alert{
+        left: -35%;
+    }
+}
+
+@media screen and (max-width: 520px){
+
+    .root{
+        padding-top: 13px;
+    }
+
+    .card_image,
+    .card_content{
+        width: 100%;
+    }
+
+    .alert{
+        left: -40%;
+    }
+
+    .card_content h1{
+        font-size: 35px;
+    }
+
+    .card_content h3{
+        font-size: 24px;
+    }
+
+    .card_content h3 span{
+        font-size: 21px !important;
+    }
+}
+
+@media screen and (max-width: 450px){
+
+    .alert{
+        left: -45%;
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    .alert{
+        left: -50%;
+    }
+
+    .card_content h1{
+        font-size: 31px;
+    }
+}
