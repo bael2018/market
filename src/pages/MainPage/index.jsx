@@ -10,7 +10,7 @@ import { arrayFunc, clothedId } from "../../components/ArrayFunc"
 const MainPage = () => {
     const [clothe , setClothe] = useState()
     const [title , setTitle] = useState('')
-    const [content , setContent] = useState([])
+    const [content , setContent] = useState(['Gj'])
     const [view , setView] = useState(true)
     const { category } = useParams();
     const [loading , setLoading] = useState(false)
@@ -161,48 +161,42 @@ const MainPage = () => {
                         loading ? (
                             <Loader/>
                         ) : (   
-                            content.length === 0 ? (
-                                <div className={cls.emptyRequest}>
-                                    <h2>Ничего не найдено</h2>
-                                </div>
-                            ) : (
-                                <>
-                                    {
-                                        content.map(item => {
-                                            return  <div key={item.id} className={view ? `${cls.male_container_wrapper_body_child}` : `${cls.male_container_wrapper_body_child_alt}`}>
-                                            <div className={cls.male_container_wrapper_body_child_header}>
-                                                <Link to={`/${category}/${clothe}/${item.id}`}>подробнее</Link>
-                                                <img src={item.img} alt="img" />
-                                            </div>
-                                            <div className={cls.male_container_wrapper_body_child_content}>
-                                                <span>
-                                                    {item.price}$
-                                                    <BiBasket className={
-                                                        heart.map(({id}) => {
-                                                            return `
-                                                                ${id === item.id ? cls.activeHeart : null}
-                                                            `
-                                                        })
-                                                    } onClick={() => heartbtn(item)}/>
-                                                </span>
-                                                <h3>{item.name}</h3>
-                                            </div>  
+                            <>
+                                {
+                                    content.map(item => {
+                                        return  <div key={item.id} className={view ? `${cls.male_container_wrapper_body_child}` : `${cls.male_container_wrapper_body_child_alt}`}>
+                                        <div className={cls.male_container_wrapper_body_child_header}>
+                                            <Link to={`/${category}/${clothe}/${item.id}`}>подробнее</Link>
+                                            <img src={item.img} alt="img" />
                                         </div>
-                                        })
-                                    }
-                                    {
-                                        hasLength ? (
-                                            <div className={cls.btnContainer}>
-                                                <button className={`${offset === 0 ? cls.disabledBtn : null}`} onClick={moveBack}>назад</button>
-                                                <button className={`${clotheAmount >= checkLength.length ? cls.disabledBtn : null}`} onClick={moveForwards}>вперед</button>
-                                            </div>
-                                        ) : (
-                                            null
-                                        )
-                                    }
-                                  
-                                </>
-                            )
+                                        <div className={cls.male_container_wrapper_body_child_content}>
+                                            <span>
+                                                {item.price}$
+                                                <BiBasket className={
+                                                    heart.map(({id}) => {
+                                                        return `
+                                                            ${id === item.id ? cls.activeHeart : null}
+                                                        `
+                                                    })
+                                                } onClick={() => heartbtn(item)}/>
+                                            </span>
+                                            <h3>{item.name}</h3>
+                                        </div>  
+                                    </div>
+                                    })
+                                }
+                                {
+                                    hasLength ? (
+                                        <div className={cls.btnContainer}>
+                                            <button className={`${offset === 0 ? cls.disabledBtn : null}`} onClick={moveBack}>назад</button>
+                                            <button className={`${clotheAmount >= checkLength.length ? cls.disabledBtn : null}`} onClick={moveForwards}>вперед</button>
+                                        </div>
+                                    ) : (
+                                        null
+                                    )
+                                }
+                                
+                            </>
                         )
                     }
                 </div>

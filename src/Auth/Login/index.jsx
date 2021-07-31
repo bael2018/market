@@ -11,25 +11,6 @@ const BASE_URL = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithP
 
 const Login = () => {
     const history = useHistory()
-    const signInGoogle = e => {
-        e.preventDefault();
-        fire.auth().signInWithPopup(provider)
-        .then(r => {
-            localStorage.setItem('user' , JSON.stringify(r.user.uid))
-            fetch(`https://market-daa4b-default-rtdb.asia-southeast1.firebasedatabase.app/users/${r.user.uid}.json` , {
-                method: 'PUT',
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify({
-                    email,
-                })
-            })
-            .then(() => history.push('/'))
-        })
-        .catch(err => console.log(err))
-    }
-    
     const [password , setNewPass] = useState('')
     const [email , setNewEmail] = useState('')
     const signIn = e => {
@@ -88,11 +69,6 @@ const Login = () => {
                             <button onClick={signIn}>Подтвердить</button>
                         </div>
                     </form>
-
-                    <div className={cls.login_quik}>
-                        <h3>Быстрый вход</h3>
-                        <img onClick={signInGoogle} src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google.png" alt="logo" />
-                    </div>
                     <div className={cls.login_newAccount}>
                         Еще нет аккаунта? <NavLink to='/register'>Регистрация</NavLink>
                     </div>
