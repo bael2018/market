@@ -8,10 +8,11 @@ const HeartsList = () => {
     const userId = JSON.parse(localStorage.getItem('user'))
     const [base , setBase] = useState([])
     const [loading , setLoading] = useState(false)
+    const [cards , setCards] = useState(false)
 
     const removeBusket = card_id => {
         deleteClothe('users' , `${userId}` , 'cards/' , `${card_id}.json` , '')
-        .then(() => window.location.reload())
+        .then(() => setCards(!cards))
     }   
 
     useEffect(() => {
@@ -24,7 +25,7 @@ const HeartsList = () => {
                 setBase(heartsList)
             }
         })
-    }, [userId])
+    }, [userId , cards])
 
     return (
         <section className={cls.heartList}>
