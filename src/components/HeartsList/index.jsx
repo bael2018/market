@@ -59,7 +59,7 @@ const HeartsList = () => {
                                     </div>
 
                                     <div>
-                                        <h3>Параметры</h3>
+                                        <h3>Описание:</h3>
                                         <p>{content}</p>
                                     </div>
 

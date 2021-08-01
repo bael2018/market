@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import cls from './Login.module.css'
-import {fire , provider} from '../../services/firebase'
 import { useHistory } from 'react-router'
 import { NavLink } from 'react-router-dom'
 import { getClothes } from '../../api'
