@@ -117,6 +117,12 @@ const MainPage = () => {
         }
     }
 
+    const resetPrize = e => {
+        e.preventDefault()
+        setMinPrize('')
+        setMaxPrize('')
+    }
+
     return (
         <section className={cls.male_container}>
             <div className={warningAlert ? `${cls.alert} , ${cls.activeAlert}` : `${cls.alert}` }>Пройдите авторизацию</div>
@@ -131,6 +137,7 @@ const MainPage = () => {
                             <li className={cls.prizeContainer}>
                                 <span onClick={() => setChangePrize(!changePrize)}>Цена <BsChevronDown/></span>
                                 <div className={changePrize ? `${cls.prizeAppear}` : null}>
+                                    <b onClick={resetPrize}>очистить</b>
                                     <input value={minPrize} onChange={e => setMinPrize(e.target.value)} placeholder="от 0" type="text" />
                                     <input value={maxPrize} onChange={e => setMaxPrize(e.target.value)} placeholder="до 50000" type="text" />
                                     <span onClick={el}>принять</span>

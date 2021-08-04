@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { createNewClothes, getClothes } from '../../api'
-import Loader from '../Loader/Loader'
+import Loader from '../../components/Loader/Loader'
 import cls from './SinglePage.module.css'
-import { arrayFunc , clothedId} from '../ArrayFunc'
+import { arrayFunc , clothedId} from '../../components/ArrayFunc'
 
 const SinglePage = () => {
     const {gen , cat , id } = useParams()

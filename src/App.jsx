@@ -5,9 +5,9 @@ import MalePage from "./pages/MainPage"
 import General from './pages/General Page'
 import Login from "./Auth/Login"
 import Register from './Auth/Register'
-import SinglePage from "./components/SinglePage"
 import Footer from "./pages/Footer"
 import HeartsList from "./components/HeartsList"
+import SinglePage from "./pages/SinglePage"
 
 const App = () => {
     return (

@@ -165,7 +165,7 @@
 .prizeContainer div{
     background: white;
     position: absolute;
-    bottom: -140px;
+    bottom: -165px;
     display: flex;
     left: -15px;
     opacity: 0;
@@ -188,6 +188,11 @@
     box-sizing: border-box;
     border: 1px solid rgb(212, 212, 212);
     outline: none;
+}
+
+.prizeContainer div b{
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
 .prizeContainer div span{
