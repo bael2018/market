@@ -58,7 +58,7 @@ const Login = () => {
                 <div className={cls.login_body}>
                     <h3 className={cls.login_title}>Авторизация</h3>
                     <form action="address">
-                    <div>
+                        <div>
                             <input value={email} onChange={e => setNewEmail(e.target.value)} placeholder='Email' type="email" />
                         </div>
                         <div>
